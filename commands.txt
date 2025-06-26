@@ -1,0 +1,3 @@
+npx html-validate index.html
+npx eslint js/ --fix
+npx stylelint sass/**/*.scss --fix
