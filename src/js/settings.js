@@ -40,9 +40,18 @@ export const select = {
     },
   },
   booking: {
-    peopleAmount: ".people-amount",
     hoursAmount: ".hours-amount",
+    form: ".booking-form",
+    formInputs: {
+      phoneInput: '[name="phone"]',
+      addressInput: '[name="address"]',
+      startersCheckboxes: 'input[name="starter"]'
+    },
+    peopleAmount: ".people-amount",
+    popUp: ".booking-widget .pop-up",
     tables: ".floor-plan .table",
+    table: '[data-table]',
+    tablesWrapper: ".floor-plan",
   },
   nav: {
     links: ".main-nav a",
@@ -79,6 +88,8 @@ export const classNames = {
   booking: {
     loading: "loading",
     tableBooked: "booked",
+    tableSelected: "selected",
+    popUpHidden: "hidden",
   },
   nav: {
     active: "active",

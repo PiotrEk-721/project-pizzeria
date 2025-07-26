@@ -10,9 +10,28 @@
   
   .booking-widget {
     transform: opacity 500ms;
+    position: relative;
   
     &.loading {
       opacity: 0.25;
+    }
+
+    &.pop-up {
+      position: absolute;
+      top: -20px;
+      right: -40px;
+      border: 2px solid lighten($color-dark, 30%);
+      width: 250px;
+      height: 100px;
+      padding: 10px;
+      display: flex;
+      text-align: center;
+      box-shadow: -4px 4px 6px lighten($color-dark, 60%);
+      z-index: 1;
+
+      &.hidden {
+        display: none;
+      }
     }
   }
   
@@ -172,6 +191,27 @@
           opacity: 0.4;
         }
   
+      }
+
+      &.selected {
+        color: $color-success-dark;
+        border: solid $color-success-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+  
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: $color-success;
+          opacity: 0.4;
+
+        }
       }
     }
   
