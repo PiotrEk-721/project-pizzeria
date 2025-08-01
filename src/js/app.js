@@ -1,4 +1,5 @@
 import { settings, select, classNames } from "./settings.js";
+import Home from "./components/Home.js";
 import Product from "./components/Product.js";
 import Cart from "./components/Cart.js";
 import Booking from "./components/Booking.js";
@@ -88,6 +89,19 @@ const app = {
     // thisApp.data = dataSource;
     // console.log('thisApp.data: ', thisApp.data);
   },
+  initHome: function () {
+    const thisApp = this;
+
+    // const homePageContainer = document.querySelector(select.containerOf.home);
+    for (let homeData in thisApp.data.homePageAssets) {
+      console.log('thisApp.data.homePageAssets[homeData].id,', thisApp.data.homePageAssets[homeData].id);
+      console.log('thisApp.data.homePageAssets[homeData]', thisApp.data.homePageAssets[homeData]);
+      new Home(
+        thisApp.data.homePageAssets[homeData].id,
+        thisApp.data.homePageAssets[homeData]
+      );
+    }
+  },
   initCart: function () {
     const thisApp = this;
 
@@ -118,6 +132,7 @@ const app = {
 
     thisApp.initPages();
     thisApp.initData();
+    thisApp.initHome();
     thisApp.initCart();
     thisApp.initBooking();
   },

@@ -202,6 +202,23 @@
          }
       }
    ],
+   "homePageAssets": [
+      {
+         "id": "1",
+         "title": "ORDER ONLINE",
+         "images": "<img src=\"images/assets/pizza-1.jpg\">"
+      },
+      {
+         "id": "2",
+         "title": "ORDER ONLINE",
+         "images": "<img src=\"images/assets/pizza-2.jpg\">"
+      },
+      {
+         "id": "3",
+         "title": "OPENING HOURS:",
+         "description": "TUE_SUN, 12PM-12AM"
+      }
+   ],
    "orders": [],
    "events": [
       {

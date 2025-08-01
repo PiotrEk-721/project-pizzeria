@@ -1,10 +1,12 @@
 export const select = {
   templateOf: {
+    homePage: "#template-home-page",
     menuProduct: "#template-menu-product",
     cartProduct: "#template-cart-product",
     bookingWidget: "#template-booking-widget",
   },
   containerOf: {
+    home: "#home-page",
     menu: "#product-list",
     cart: "#cart",
     pages: "#pages",
@@ -38,6 +40,9 @@ export const select = {
       input: 'input[type="range"]',
       output: ".output",
     },
+  },
+  home: {
+    firstImageWrapper: ".home__first__images",
   },
   booking: {
     hoursAmount: ".hours-amount",
@@ -132,6 +137,9 @@ export const settings = {
 };
 
 export const templates = {
+  homePage: Handlebars.compile(
+    document.querySelector(select.templateOf.homePage).innerHTML
+  ),
   menuProduct: Handlebars.compile(
     document.querySelector(select.templateOf.menuProduct).innerHTML
   ),
